@@ -13,6 +13,9 @@ const Slider = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [windowWidth, setWindowWidth] = useState(0);
 
+    // Limitar a los primeros 3 elementos del JSON
+    const limitedPizzas = pizzas.slice(0, 6);
+
     useEffect(() => {
         setWindowWidth(window.innerWidth);
         const handleResize = () => setWindowWidth(window.innerWidth);
@@ -67,8 +70,8 @@ const Slider = () => {
                         },
                     }}
                 >
-                    {pizzas.map((item, index) => {
-                        const isCenter = windowWidth >= 1024 && index === (activeIndex + 1) % pizzas.length;
+                    {limitedPizzas.map((item, index) => {
+                        const isCenter = windowWidth >= 1024 && index === (activeIndex + 1) % limitedPizzas.length;
 
                         return (
                             <SwiperSlide key={item.id} className="p-2 sm:p-4">

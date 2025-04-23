@@ -7,7 +7,7 @@ const Header = () => {
                 <ul className="flex items-center gap-4">
                     <li>
                         <a
-                            href="#"
+                            href="/"
                             className="relative text-xl font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[3px] after:w-0 after:bg-white after:rounded-full after:transition-all after:duration-300 hover:after:w-full"
                         >
                             Inicio
@@ -15,7 +15,7 @@ const Header = () => {
                     </li>
                     <li>
                         <a
-                            href="#"
+                            href="/productos#pizzas"
                             className="relative text-xl font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[3px] after:w-0 after:bg-white after:rounded-full after:transition-all after:duration-300 hover:after:w-full"
                         >
                             Pizzas
@@ -23,7 +23,7 @@ const Header = () => {
                     </li>
                     <li>
                         <a
-                            href="#"
+                            href="/productos#bebidas"
                             className="relative text-xl font-medium after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[3px] after:w-0 after:bg-white after:rounded-full after:transition-all after:duration-300 hover:after:w-full"
                         >
                             Bebidas
