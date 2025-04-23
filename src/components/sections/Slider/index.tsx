@@ -23,7 +23,7 @@ const Slider = () => {
     }, []);
 
     return (
-        <section className="min-w-xl max-w-6xl mx-auto mt-8 md:mt-16">
+        <section className="max-w-sm sm:max-w-6xl mx-auto mt-8 md:mt-16">
             <div className="container mx-auto px-4 sm:px-8 lg:px-0 relative">
                 <Swiper
                     className="custom-swiper"
