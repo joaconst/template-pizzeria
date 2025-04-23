@@ -1,4 +1,6 @@
 'use client';
+
+import Image from 'next/image';
 import drinks from '@/data/drinks.json';
 
 const DrinkGrid = () => {
@@ -16,7 +18,7 @@ const DrinkGrid = () => {
           >
             <article className="relative w-full h-82 rounded-lg overflow-hidden flex flex-col items-center text-center bg-transparent">
               <div className="relative z-10 w-[140px] h-[140px] md:w-[160px] md:h-[160px]">
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover rounded-full"

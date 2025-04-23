@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Header = () => {
     return (
@@ -32,7 +33,7 @@ const Header = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="#"><img src="/images/favicon.webp" alt="Logo" className="w-16 h-16" /></Link>
+                        <Link href="#"><Image src="/images/favicon.webp" alt="Logo" className="w-16 h-16" /></Link>
                     </li>
                 </ul>
             </nav>

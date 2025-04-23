@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import pizzas from '@/data/pizzas.json';
 
 const PizzaModal = ({ pizza, allPizzas, onClose }: { pizza: any, allPizzas: any[], onClose: () => void }) => {
@@ -51,7 +52,7 @@ const PizzaModal = ({ pizza, allPizzas, onClose }: { pizza: any, allPizzas: any[
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mb-4">
           <h3 className="text-xl sm:text-3xl font-bold text-white text-center sm:text-left flex-1 order-1">{pizza.title}</h3>
           <div className="relative w-24 h-24 md:w-32 md:h-32 order-2">
-            <img
+            <Image
               src={pizza.image}
               alt={pizza.title}
               className="w-full h-full object-cover rounded-full"
@@ -178,7 +179,7 @@ const PizzaGrid = () => {
           >
             <article className="relative w-full h-82 rounded-lg overflow-hidden flex flex-col items-center text-center bg-transparent">
               <div className="relative z-10 w-[140px] h-[140px] md:w-[160px] md:h-[160px]">
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover rounded-full"

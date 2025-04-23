@@ -1,6 +1,8 @@
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -81,7 +83,7 @@ const Slider = () => {
                                     } after:content-[''] after:absolute after:top-[20%] after:left-0 after:w-full after:h-[80%] after:bg-primary after:rounded-t-2xl after:z-0`}
                                 >
                                     <div className="relative z-10 w-[200px] md:w-[215px] h-[200px] md:h-[215px]">
-                                        <img
+                                        <Image
                                             src={item.image}
                                             alt={item.title}
                                             className="w-full h-full object-cover rounded-full"
@@ -96,12 +98,12 @@ const Slider = () => {
                                         </div>
 
                                         <div className="mt-6 mb-4 flex justify-center">
-                                            <a
+                                            <Link
                                                 href="#"
                                                 className="inline-block px-8 py-2 text-lg font-semibold bg-secondary text-white rounded-2xl transition-all duration-300 hover:bg-secondary/90 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 shadow-[4px_4px_10px_rgba(0,0,0,0.5)]"
                                             >
                                                 Ver más
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 </article>
@@ -110,12 +112,12 @@ const Slider = () => {
                     })}
                 </Swiper>
                 
-                <a
+                <Link
                     href="#"
                     className="mt-12 block w-fit mx-auto px-12 py-3 text-2xl font-semibold bg-secondary text-white rounded-2xl transition-all duration-300 hover:bg-secondary/90 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 shadow-[4px_4px_10px_rgba(0,0,0,0.5)]"
                 >
                     Ver todas
-                </a>
+                </Link>
             </div>
         </section>
     );
