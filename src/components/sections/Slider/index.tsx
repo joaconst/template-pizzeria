@@ -25,20 +25,6 @@ const Slider = () => {
     return (
         <section className="min-w-xl max-w-6xl mx-auto mt-8 md:mt-16">
             <div className="container mx-auto px-4 sm:px-8 lg:px-0 relative">
-                <button
-                    ref={prevRef}
-                    className="absolute left-4 sm:-left-5 top-1/2 -translate-y-1/2 z-10 bg-secondary p-2 rounded-full border shadow-lg w-10 h-10 flex items-center justify-center hover:scale-105 transition-transform"
-                >
-                    <span className="text-white font-bold text-xl">←</span>
-                </button>
-
-                <button
-                    ref={nextRef}
-                    className="absolute right-4 sm:-right-5 top-1/2 -translate-y-1/2 z-10 bg-secondary p-2 rounded-full border shadow-lg w-10 h-10 flex items-center justify-center hover:scale-105 transition-transform"
-                >
-                    <span className="text-white font-bold text-xl">→</span>
-                </button>
-
                 <Swiper
                     className="custom-swiper"
                     loop={true}
@@ -50,10 +36,6 @@ const Slider = () => {
                         }
                     }}
                     onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-                    navigation={{
-                        prevEl: prevRef.current,
-                        nextEl: nextRef.current,
-                    }}
                     breakpoints={{
                         0: {
                             slidesPerView: 1,
