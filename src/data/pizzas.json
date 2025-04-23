@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "title": "Pizza Margherita",
+      "description": "Pizza margarita napolitana tradicional con tomate, mozzarella y albahaca.",
+      "image": "/images/pizzas/margherita.webp"
+    },
+    {
+      "id": 2,
+      "title": "Pizza de Rucula",
+      "description": "Disfrutá nuestra pizza con rúcula, una combinación fresca y sabrosa",
+      "image": "/images/pizzas/rucula.webp"
+    },
+    {
+      "id": 3,
+      "title": "Pizza Cuatro Quesos",
+      "description": "Mozzarella, gorgonzola y más, en una base crujiente al estilo italiano.",
+      "image": "images/pizzas/quesos.webp"
+    },
+    {
+      "id": 4,
+      "title": "Pizza Vegetariana",
+      "description": "xxxxxxxxxxxxxxxxxxxxx",
+      "image": "/images/pizzas/vegetariana.webp"
+    },
+    {
+      "id": 5,
+      "title": "Pizza Especial",
+      "description": "xxxxxxxxxxxxxxxxxxxxx",
+      "image": "/images/pizzas/especial.webp"
+    },
+    {
+      "id": 6,
+      "title": "Pizza Champiñón",
+      "description": "xxxxxxxxxxxxxxxxxxxxx",
+      "image": "/images/pizzas/champiñon.webp"
+    }
+  ]
+  
