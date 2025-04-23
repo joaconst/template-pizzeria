@@ -1,39 +1,83 @@
 [
-    {
-      "id": 1,
-      "title": "Pizza Margherita",
-      "description": "Pizza margarita napolitana tradicional con tomate, mozzarella y albahaca.",
-      "image": "/images/pizzas/margherita.webp"
-    },
-    {
-      "id": 2,
-      "title": "Pizza de Rucula",
-      "description": "Disfrutá nuestra pizza con rúcula, una combinación fresca y sabrosa",
-      "image": "/images/pizzas/rucula.webp"
-    },
-    {
-      "id": 3,
-      "title": "Pizza Cuatro Quesos",
-      "description": "Mozzarella, gorgonzola y más, en una base crujiente al estilo italiano.",
-      "image": "images/pizzas/quesos.webp"
-    },
-    {
-      "id": 4,
-      "title": "Pizza Vegetariana",
-      "description": "xxxxxxxxxxxxxxxxxxxxx",
-      "image": "/images/pizzas/vegetariana.webp"
-    },
-    {
-      "id": 5,
-      "title": "Pizza Especial",
-      "description": "xxxxxxxxxxxxxxxxxxxxx",
-      "image": "/images/pizzas/especial.webp"
-    },
-    {
-      "id": 6,
-      "title": "Pizza Champiñón",
-      "description": "xxxxxxxxxxxxxxxxxxxxx",
-      "image": "/images/pizzas/champiñon.webp"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Pizza Margherita",
+    "description": "Pizza margarita napolitana tradicional con tomate, mozzarella y albahaca.",
+    "image": "/images/pizzas/margherita.webp",
+    "ingredients": ["Mozzarella", "Tomate", "Albahaca fresca", "Aceite de oliva"],
+    "characteristics": ["Masa fina", "Horno de leña", "Clásica italiana"],
+    "price": "1000"
+  },
+  {
+    "id": 2,
+    "title": "Pizza de Rucula",
+    "description": "Disfrutá nuestra pizza con rúcula, una combinación fresca y sabrosa",
+    "image": "/images/pizzas/rucula.webp",
+    "ingredients": ["Rúcula fresca", "Queso parmesano", "Jamón crudo", "Tomates cherry"],
+    "characteristics": ["Masa crocante", "Vegetales frescos", "Toque cítrico"],
+    "price": "1000"
+  },
+  {
+    "id": 3,
+    "title": "Pizza Cuatro Quesos",
+    "description": "Mozzarella, gorgonzola y más, en una base crujiente al estilo italiano.",
+    "image": "images/pizzas/quesos.webp",
+    "ingredients": ["Mozzarella", "Gorgonzola", "Parmesano", "Fontina"],
+    "characteristics": ["Mezcla cremosa", "Masa tradicional", "Aroma intenso"],
+    "price": "1000"
+  },
+  {
+    "id": 4,
+    "title": "Pizza Margherita Especial",
+    "description": "Versión premium de la clásica Margherita con ingredientes selectos",
+    "image": "/images/pizzas/margherita.webp",
+    "ingredients": ["Mozzarella di Bufala", "Tomates San Marzano", "Albahaca orgánica"],
+    "characteristics": ["Ingredientes premium", "Masa artesanal", "Cocción lenta"],
+    "price": "1200"
+  },
+  {
+    "id": 5,
+    "title": "Pizza de Rucula y Prosciutto",
+    "description": "Mejorada con finas láminas de prosciutto di Parma",
+    "image": "/images/pizzas/rucula.webp",
+    "ingredients": ["Rúcula", "Prosciutto di Parma", "Queso grana padano"],
+    "characteristics": ["Sabores balanceados", "Corteza dorada", "Presentación gourmet"],
+    "price": "1200"
+  },
+  {
+    "id": 6,
+    "title": "Pizza Cuatro Quesos con Trufa",
+    "description": "Nuestra versión premium con aceite de trufa negra",
+    "image": "images/pizzas/quesos.webp",
+    "ingredients": ["Cuatro quesos", "Aceite de trufa", "Hongos silvestres"],
+    "characteristics": ["Aroma a trufa", "Quesos añejados", "Experiencia gourmet"],
+    "price": "1400"
+  },
+  {
+    "id": 7,
+    "title": "Pizza Vegetariana",
+    "description": "Explosión de sabores vegetales con los mejores ingredientes frescos",
+    "image": "/images/pizzas/vegetariana.webp",
+    "ingredients": ["Berenjena", "Calabacín", "Pimiento", "Cebolla caramelizada", "Aceitunas"],
+    "characteristics": ["100% vegetal", "Colorido", "Opción saludable"],
+    "price": "1100"
+  },
+  {
+    "id": 8,
+    "title": "Pizza Especial de la Casa",
+    "description": "La combinación secreta de nuestro chef que te sorprenderá",
+    "image": "/images/pizzas/especial.webp",
+    "ingredients": ["Pepperoni", "Champiñones", "Aceitunas negras", "Pimientos asados", "Cebolla morada"],
+    "characteristics": ["Receta exclusiva", "Mezcla de sabores", "Favorita de los clientes"],
+    "price": "1300"
+  },
+  {
+    "id": 9,
+    "title": "Pizza Champiñón y Panceta",
+    "description": "Combinación clásica de hongos frescos con panceta crocante",
+    "image": "/images/pizzas/champiñon.webp",
+    "ingredients": ["Champiñones portobello", "Panceta ahumada", "Cebolla caramelizada", "Queso provolone"],
+    "characteristics": ["Hongos seleccionados", "Contraste de texturas", "Umami intenso"],
+    "price": "1250"
+  }
+]

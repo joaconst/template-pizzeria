@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Coca-Cola",
+        "image": "/images/bebidas/cola.webp",
+        "price": "500"
+    },
+    {
+        "id": 2,
+        "title": "Sprite",
+        "image": "/images/bebidas/sprite.webp",
+        "price": "500"
+    },
+    {
+        "id": 3,
+        "title": "Fanta",
+        "image": "/images/bebidas/fanta.webp",
+        "price": "500"
+    },
+    {
+        "id": 4,
+        "title": "Vino",
+        "image": "/images/bebidas/limonada.webp",
+        "price": "600"
+    },
+    {
+        "id": 5,
+        "title": "Agua Mineral",
+        "image": "/images/bebidas/agua.webp",
+        "price": "400"
+    },
+    {
+        "id": 6,
+        "title": "Cerveza Rubia",
+        "image": "/images/bebidas/cerveza.webp",
+        "price": "800"
+    }
+]
