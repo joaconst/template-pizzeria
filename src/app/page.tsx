@@ -9,10 +9,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Slider />
       <Drinks />
       <Bento />
-      <Info />
       <Separator />
     </main>
   );
