@@ -6,7 +6,7 @@
     "image": "/images/pizzas/margherita.webp",
     "ingredients": ["Mozzarella", "Tomate", "Albahaca fresca", "Aceite de oliva"],
     "characteristics": ["Masa fina", "Horno de leña", "Clásica italiana"],
-    "price": "1000"
+    "price": 1000
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "image": "/images/pizzas/rucula.webp",
     "ingredients": ["Rúcula fresca", "Queso parmesano", "Jamón crudo", "Tomates cherry"],
     "characteristics": ["Masa crocante", "Vegetales frescos", "Toque cítrico"],
-    "price": "1000"
+    "price": 1000
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "image": "images/pizzas/quesos.webp",
     "ingredients": ["Mozzarella", "Gorgonzola", "Parmesano", "Fontina"],
     "characteristics": ["Mezcla cremosa", "Masa tradicional", "Aroma intenso"],
-    "price": "1000"
+    "price": 1000
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "image": "/images/pizzas/margherita.webp",
     "ingredients": ["Mozzarella di Bufala", "Tomates San Marzano", "Albahaca orgánica"],
     "characteristics": ["Ingredientes premium", "Masa artesanal", "Cocción lenta"],
-    "price": "1200"
+    "price": 1200
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "image": "/images/pizzas/rucula.webp",
     "ingredients": ["Rúcula", "Prosciutto di Parma", "Queso grana padano"],
     "characteristics": ["Sabores balanceados", "Corteza dorada", "Presentación gourmet"],
-    "price": "1200"
+    "price": 1200
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "image": "images/pizzas/quesos.webp",
     "ingredients": ["Cuatro quesos", "Aceite de trufa", "Hongos silvestres"],
     "characteristics": ["Aroma a trufa", "Quesos añejados", "Experiencia gourmet"],
-    "price": "1400"
+    "price": 1400
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "image": "/images/pizzas/vegetariana.webp",
     "ingredients": ["Berenjena", "Calabacín", "Pimiento", "Cebolla caramelizada", "Aceitunas"],
     "characteristics": ["100% vegetal", "Colorido", "Opción saludable"],
-    "price": "1100"
+    "price": 1100
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "image": "/images/pizzas/especial.webp",
     "ingredients": ["Pepperoni", "Champiñones", "Aceitunas negras", "Pimientos asados", "Cebolla morada"],
     "characteristics": ["Receta exclusiva", "Mezcla de sabores", "Favorita de los clientes"],
-    "price": "1300"
+    "price": 1300
   },
   {
     "id": 9,
@@ -78,6 +78,6 @@
     "image": "/images/pizzas/champiñon.webp",
     "ingredients": ["Champiñones portobello", "Panceta ahumada", "Cebolla caramelizada", "Queso provolone"],
     "characteristics": ["Hongos seleccionados", "Contraste de texturas", "Umami intenso"],
-    "price": "1250"
+    "price": 1250
   }
 ]

@@ -3,24 +3,35 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import pizzas from '@/data/pizzas.json';
 
-const PizzaModal = ({ pizza, allPizzas, onClose }: { pizza: any, allPizzas: any[], onClose: () => void }) => {
+interface Pizza {
+  id: number;
+  title: string;
+  image: string;
+  price: number;
+  ingredients: string[];
+  characteristics: string[];
+}
+
+interface PizzaModalProps {
+  pizza: Pizza;
+  allPizzas: Pizza[];
+  onClose: () => void;
+}
+
+const PizzaModal = ({ pizza, allPizzas, onClose }: PizzaModalProps) => {
   const [quantity, setQuantity] = useState(1);
   const [selectedHalf, setSelectedHalf] = useState('');
   const [removedIngredients, setRemovedIngredients] = useState<string[]>([]);
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Función para manejar el clic fuera del modal
     const handleClickOutside = (event: MouseEvent) => {
       if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
         onClose();
       }
     };
 
-    // Añadir el event listener
     document.addEventListener('mousedown', handleClickOutside);
-    
-    // Cleanup del event listener al desmontar
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -28,8 +39,8 @@ const PizzaModal = ({ pizza, allPizzas, onClose }: { pizza: any, allPizzas: any[
 
   return (
     <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-8">
-      <div 
-        ref={modalRef} 
+      <div
+        ref={modalRef}
         className="bg-gray-900 rounded-xl max-w-6xl w-full h-[90vh] overflow-y-auto p-3 sm:p-6 relative mx-1 sm:mx-2 scrollbar-hide"
       >
         <style jsx>{`
@@ -41,7 +52,7 @@ const PizzaModal = ({ pizza, allPizzas, onClose }: { pizza: any, allPizzas: any[
             display: none;
           }
         `}</style>
-      
+
         <button
           onClick={onClose}
           className="absolute top-2 right-2 sm:top-4 sm:right-4 text-xl sm:text-2xl text-white hover:text-secondary transition-colors"
@@ -56,6 +67,8 @@ const PizzaModal = ({ pizza, allPizzas, onClose }: { pizza: any, allPizzas: any[
               src={pizza.image}
               alt={pizza.title}
               className="w-full h-full object-cover rounded-full"
+              width={128}
+              height={128}
             />
           </div>
         </div>
@@ -81,12 +94,12 @@ const PizzaModal = ({ pizza, allPizzas, onClose }: { pizza: any, allPizzas: any[
                 </button>
               </div>
               <button className="w-full sm:w-auto mt-3 sm:mt-0 py-2 px-4 bg-secondary text-white rounded-lg hover:bg-secondary/90 transition-colors text-base sm:text-lg font-semibold">
-                Añadir al carrito - ${Number(pizza.price) * quantity}
+                Añadir al carrito - ${pizza.price * quantity}
               </button>
             </div>
           </div>
 
-          {/* Sección combinada Mitades + Ingredientes */}
+          {/* Mitades y Quitar ingredientes */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {/* Mitades */}
             <div className="flex flex-col gap-2 sm:gap-3">
@@ -98,21 +111,20 @@ const PizzaModal = ({ pizza, allPizzas, onClose }: { pizza: any, allPizzas: any[
               >
                 <option value="">Seleccione mitades</option>
                 {allPizzas
-                  .filter(p => p.id !== pizza.id)
-                  .map(p => (
+                  .filter((p) => p.id !== pizza.id)
+                  .map((p) => (
                     <option key={`mitad-${p.id}`} value={p.title}>
                       Mitad {p.title}
                     </option>
-                  ))
-                }
+                  ))}
               </select>
             </div>
 
-            {/* Quitar ingredientes */}
+            {/* Ingredientes */}
             <div className="flex flex-col gap-2">
               <label className="text-white font-medium text-base">Quitar ingredientes</label>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
-                {pizza.ingredients.map((ingredient: string) => (
+                {pizza.ingredients.map((ingredient) => (
                   <label
                     key={ingredient}
                     className="flex items-center gap-1.5 text-white bg-gray-800 p-1.5 rounded-md text-xs sm:text-sm"
@@ -125,7 +137,7 @@ const PizzaModal = ({ pizza, allPizzas, onClose }: { pizza: any, allPizzas: any[
                         if (e.target.checked) {
                           setRemovedIngredients([...removedIngredients, ingredient]);
                         } else {
-                          setRemovedIngredients(removedIngredients.filter(i => i !== ingredient));
+                          setRemovedIngredients(removedIngredients.filter((i) => i !== ingredient));
                         }
                       }}
                     />
@@ -141,7 +153,7 @@ const PizzaModal = ({ pizza, allPizzas, onClose }: { pizza: any, allPizzas: any[
             <div>
               <h4 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Ingredientes</h4>
               <ul className="list-disc pl-5 text-white/90 space-y-1 sm:space-y-2">
-                {pizza.ingredients.map((ingredient: string) => (
+                {pizza.ingredients.map((ingredient) => (
                   <li key={ingredient} className="text-base sm:text-lg">{ingredient}</li>
                 ))}
               </ul>
@@ -150,7 +162,7 @@ const PizzaModal = ({ pizza, allPizzas, onClose }: { pizza: any, allPizzas: any[
             <div>
               <h4 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Características</h4>
               <ul className="list-disc pl-5 text-white/90 space-y-1 sm:space-y-2">
-                {pizza.characteristics.map((char: string) => (
+                {pizza.characteristics.map((char) => (
                   <li key={char} className="text-base sm:text-lg">{char}</li>
                 ))}
               </ul>
@@ -163,16 +175,16 @@ const PizzaModal = ({ pizza, allPizzas, onClose }: { pizza: any, allPizzas: any[
 };
 
 const PizzaGrid = () => {
-  const [selectedPizza, setSelectedPizza] = useState<any>(null);
+  const [selectedPizza, setSelectedPizza] = useState<Pizza | null>(null);
 
   return (
-    <section className="max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-12" id='pizzas'>
+    <section className="max-w-4xl mx-auto px-4 sm:px-6 py-8 md:py-12" id="pizzas">
       <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-6">
         Nuestras Pizzas
       </h2>
 
       <div className="flex flex-wrap justify-center gap-3 sm:gap-4 lg:gap-5">
-        {pizzas.slice(3).map((item) => (
+        {pizzas.slice(3).map((item: Pizza) => (
           <div
             key={item.id}
             className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] p-2 transform transition-all duration-300 hover:scale-[1.02]"
@@ -184,6 +196,8 @@ const PizzaGrid = () => {
                   alt={item.title}
                   className="w-full h-full object-cover rounded-full"
                   loading="lazy"
+                  width={160}
+                  height={160}
                 />
               </div>
 
