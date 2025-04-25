@@ -33,7 +33,7 @@ const Header = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="#"><Image src="/images/favicon.webp" alt="Logo" className="w-16 h-16" /></Link>
+                        <Link href="#"><Image src="/images/favicon.webp" alt="Logo" width={64} height={64} /></Link>
                     </li>
                 </ul>
             </nav>

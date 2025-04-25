@@ -30,12 +30,14 @@ const DrinkGrid = () => {
               className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] p-2 transform transition-all duration-300 hover:scale-[1.02]"
             >
               <article className="relative w-full h-82 rounded-lg overflow-hidden flex flex-col items-center text-center bg-transparent">
-                <div className="relative z-10 w-[140px] h-[140px] md:w-[160px] md:h-[160px]">
+                <div className="relative z-10 w-[160px] h-[160px]">
                   <Image
                     src={drink.image}
                     alt={drink.title}
                     className="w-full h-full object-cover rounded-full"
                     loading="lazy"
+                    width={200}
+                    height={200}
                   />
                 </div>
 

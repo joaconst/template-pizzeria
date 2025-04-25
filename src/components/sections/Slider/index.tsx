@@ -15,7 +15,6 @@ const Slider = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [windowWidth, setWindowWidth] = useState(0);
 
-    // Limitar a los primeros 3 elementos del JSON
     const limitedPizzas = pizzas.slice(0, 6);
 
     useEffect(() => {
@@ -78,9 +77,8 @@ const Slider = () => {
                         return (
                             <SwiperSlide key={item.id} className="p-2 sm:p-4">
                                 <article
-                                    className={`relative w-[250px] md:w-[300px] h-[475px] mx-auto rounded-2xl overflow-hidden flex flex-col items-center justify-center text-center bg-transparent transition-all duration-300 ease-in-out ${
-                                        isCenter ? 'lg:scale-110 lg:z-10' : 'lg:scale-95'
-                                    } after:content-[''] after:absolute after:top-[20%] after:left-0 after:w-full after:h-[80%] after:bg-primary after:rounded-t-2xl after:z-0`}
+                                    className={`relative w-[250px] md:w-[300px] h-[475px] mx-auto rounded-2xl overflow-hidden flex flex-col items-center justify-center text-center bg-transparent transition-all duration-300 ease-in-out ${isCenter ? 'lg:scale-110 lg:z-10' : 'lg:scale-95'
+                                        } after:content-[''] after:absolute after:top-[20%] after:left-0 after:w-full after:h-[80%] after:bg-primary after:rounded-t-2xl after:z-0`}
                                 >
                                     <div className="relative z-10 w-[200px] md:w-[215px] h-[200px] md:h-[215px]">
                                         <Image
@@ -88,6 +86,8 @@ const Slider = () => {
                                             alt={item.title}
                                             className="w-full h-full object-cover rounded-full"
                                             loading="lazy"
+                                            width={200}
+                                            height={200}
                                         />
                                     </div>
 
@@ -111,7 +111,7 @@ const Slider = () => {
                         );
                     })}
                 </Swiper>
-                
+
                 <Link
                     href="#"
                     className="mt-12 block w-fit mx-auto px-12 py-3 text-2xl font-semibold bg-secondary text-white rounded-2xl transition-all duration-300 hover:bg-secondary/90 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 shadow-[4px_4px_10px_rgba(0,0,0,0.5)]"

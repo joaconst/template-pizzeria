@@ -67,8 +67,8 @@ const PizzaModal = ({ pizza, allPizzas, onClose }: PizzaModalProps) => {
               src={pizza.image}
               alt={pizza.title}
               className="w-full h-full object-cover rounded-full"
-              width={128}
-              height={128}
+              width={200}
+              height={200}
             />
           </div>
         </div>
@@ -189,15 +189,15 @@ const PizzaGrid = () => {
             key={item.id}
             className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] p-2 transform transition-all duration-300 hover:scale-[1.02]"
           >
-            <article className="relative w-full h-82 rounded-lg overflow-hidden flex flex-col items-center text-center bg-transparent">
-              <div className="relative z-10 w-[140px] h-[140px] md:w-[160px] md:h-[160px]">
+            <article className="relative w-full h-96 rounded-lg overflow-hidden flex flex-col items-center text-center bg-transparent">
+              <div className="relative z-10 w-[200px] h-[200px]">
                 <Image
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover rounded-full"
                   loading="lazy"
-                  width={160}
-                  height={160}
+                  width={200}
+                  height={200}
                 />
               </div>
 
