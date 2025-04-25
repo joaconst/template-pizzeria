@@ -21,7 +21,7 @@
     "id": 3,
     "title": "Pizza Cuatro Quesos",
     "description": "Mozzarella, gorgonzola y más, en una base crujiente al estilo italiano.",
-    "image": "images/pizzas/quesos.webp",
+    "image": "/images/pizzas/quesos.webp",
     "ingredients": ["Mozzarella", "Gorgonzola", "Parmesano", "Fontina"],
     "characteristics": ["Mezcla cremosa", "Masa tradicional", "Aroma intenso"],
     "price": 1000
@@ -48,7 +48,7 @@
     "id": 6,
     "title": "Pizza Cuatro Quesos con Trufa",
     "description": "Nuestra versión premium con aceite de trufa negra",
-    "image": "images/pizzas/quesos.webp",
+    "image": "/images/pizzas/quesos.webp",
     "ingredients": ["Cuatro quesos", "Aceite de trufa", "Hongos silvestres"],
     "characteristics": ["Aroma a trufa", "Quesos añejados", "Experiencia gourmet"],
     "price": 1400
